@@ -1,0 +1,36 @@
+{
+  "name": "@zaes/symbology-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Workspace for @zaes/symbology-engine and @zaes/symbology-editor.",
+  "author": "ZAES",
+  "contributors": [
+    "Edwin Sanchez <edwin.sanchez@zaes.com>"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build-lib.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check:layering": "node scripts/check-layering.mjs",
+    "check": "npm run typecheck && npm test && npm run check:layering && npm run build"
+  },
+  "devDependencies": {
+    "@types/geojson": "^7946.0.16",
+    "@types/node": "^22.20.1",
+    "maplibre-gl": "^6.7.0",
+    "ol": "^10.10.0",
+    "rolldown": "1.2.15",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  },
+  "workspaces": [
+    "packages/engine",
+    "packages/engine-editor"
+  ]
+}

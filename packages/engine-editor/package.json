@@ -1,0 +1,53 @@
+{
+  "name": "@zaes/symbology-editor",
+  "version": "0.7.0",
+  "author": "ZAES",
+  "contributors": [
+    "Edwin Sanchez <edwin.sanchez@zaes.com>"
+  ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "description": "Drawing, editing and undo/redo for symbol families on @zaes/symbology-engine, on any map host.",
+  "keywords": [
+    "map",
+    "symbology",
+    "geojson",
+    "editor",
+    "drawing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaes-code/symbology-engine.git",
+    "directory": "packages/engine-editor"
+  },
+  "homepage": "https://github.com/zaes-code/symbology-engine/tree/develop/packages/engine-editor#readme",
+  "bugs": {
+    "url": "https://github.com/zaes-code/symbology-engine/issues"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@zaes/symbology-engine": "0.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

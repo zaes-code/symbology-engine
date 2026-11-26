@@ -1,0 +1,86 @@
+{
+  "name": "@zaes/symbology-engine",
+  "version": "0.7.0",
+  "author": "ZAES",
+  "contributors": [
+    "Edwin Sanchez <edwin.sanchez@zaes.com>"
+  ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "description": "A map-symbology engine: paints symbol families as screen-sized marks on OpenLayers and MapLibre, with a GeoJSON store and a map-host seam for editors.",
+  "keywords": [
+    "map",
+    "symbology",
+    "geojson",
+    "openlayers",
+    "maplibre",
+    "renderer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaes-code/symbology-engine.git",
+    "directory": "packages/engine"
+  },
+  "homepage": "https://github.com/zaes-code/symbology-engine/tree/develop/packages/engine#readme",
+  "bugs": {
+    "url": "https://github.com/zaes-code/symbology-engine/issues"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./openlayers": {
+      "types": "./dist/types/openlayers/index.d.ts",
+      "import": "./dist/esm/openlayers/index.js",
+      "require": "./dist/cjs/openlayers/index.js"
+    },
+    "./maplibre": {
+      "types": "./dist/types/maplibre/index.d.ts",
+      "import": "./dist/esm/maplibre/index.js",
+      "require": "./dist/cjs/maplibre/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@types/geojson": "^7946.0.16"
+  },
+  "peerDependencies": {
+    "maplibre-gl": ">=4",
+    "ol": ">=9"
+  },
+  "peerDependenciesMeta": {
+    "maplibre-gl": {
+      "optional": true
+    },
+    "ol": {
+      "optional": true
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "openlayers": [
+        "dist/types/openlayers/index.d.ts"
+      ],
+      "maplibre": [
+        "dist/types/maplibre/index.d.ts"
+      ]
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
